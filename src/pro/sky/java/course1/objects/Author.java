@@ -24,4 +24,8 @@ public class Author {
     public void setSurnameAuthor(String surnameAuthor) {
         this.surnameAuthor = surnameAuthor;
     }
+
+    public String toString() {
+        return this.nameAuthor+this.surnameAuthor;
+    }
 }

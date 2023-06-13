@@ -11,6 +11,10 @@ public class Book {
         this.yearOfPublication = yearOfPublication;
     }
 
+    public String toString() {
+        return "Имя и Фамилия - " + this.author + ". Дата издания - " + this.yearOfPublication;
+    }
+
     public String getBookName() {
         return this.bookName;
     }
