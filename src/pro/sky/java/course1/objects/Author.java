@@ -14,18 +14,12 @@ public class Author {
     }
 
     public String getSurnameAuthor() {
+
         return this.surnameAuthor;
     }
 
-    public void setNameAuthor(String nameAuthor) {
-        this.nameAuthor = nameAuthor;
-    }
-
-    public void setSurnameAuthor(String surnameAuthor) {
-        this.surnameAuthor = surnameAuthor;
-    }
-
     public String toString() {
-        return this.nameAuthor+this.surnameAuthor;
+
+        return this.nameAuthor + this.surnameAuthor;
     }
 }
