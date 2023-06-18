@@ -31,7 +31,7 @@ public class Author {
         if (this == author1) {
             return true;
         }
-        if (author1 != null) {
+        if (author1 == null) {
             return false;
         }
 
