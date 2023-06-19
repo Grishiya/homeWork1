@@ -3,8 +3,8 @@ package pro.sky.java.course1.objects;
 import java.util.Objects;
 
 public class Book {
-    private Author author;
-    private String bookName;
+    final private Author author;
+    final private String bookName;
     private int yearOfPublication;
 
     public Book(Author author, String bookName, int yearOfPublication) {
@@ -13,6 +13,10 @@ public class Book {
         this.yearOfPublication = yearOfPublication;
     }
     public Author getAuthor(){
+        return this.author;
+    }
+
+    public Author getAuthor() {
         return this.author;
     }
 
@@ -26,18 +30,14 @@ public class Book {
         return this.yearOfPublication;
     }
 
-    public Author getAuthor() {
-        return this.author;
-    }
-
-
+    
     public void setYearOfPublication(int yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
     }
 
     @Override
     public String toString() {
-        return "Книга - " + bookName + ". Имя и Фамилия - " + this.author.toString() + ". Дата издания - " + this.yearOfPublication;
+        return "Книга - " + bookName + ". Имя и Фамилия - " + this.getAuthor().toString() + ". Дата издания - " + this.yearOfPublication;
     }
 
 
