@@ -1,27 +1,51 @@
 package pro.sky.java.course1.objects;
 
+import java.util.Objects;
+
 public class Author {
-    private String nameAuthor;
-    private String surnameAuthor;
+    private String name;
+    private String surname;
 
-    public Author(String nameAuthor, String surnameAuthor) {
-        this.nameAuthor = nameAuthor;
-        this.surnameAuthor = surnameAuthor;
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
 
-    public String getNameAuthor() {
-        return this.nameAuthor;
+    public String getName() {
+        return this.name;
     }
 
-    public String getSurnameAuthor() {
-        return this.surnameAuthor;
+    public String getSurname() {
+
+        return this.surname;
     }
 
-    public void setNameAuthor(String nameAuthor) {
-        this.nameAuthor = nameAuthor;
+    @Override
+    public String toString() {
+
+        return this.name + this.surname;
     }
 
-    public void setSurnameAuthor(String surnameAuthor) {
-        this.surnameAuthor = surnameAuthor;
+    @Override
+    public boolean equals(Object author1) {
+        if (this == author1) {
+            return true;
+        }
+        if (author1 == null) {
+            return false;
+        }
+
+        if (this.getClass() != author1.getClass()) {
+            return false;
+        }
+        Author author = (Author) author1;
+
+        return name.equals(author.getName()) && surname.equals(author.getSurname());
     }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(name,surname);
+    }
+
 }
