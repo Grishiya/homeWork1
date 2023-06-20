@@ -13,5 +13,7 @@ public class Objects {
         System.out.println(onePiece);
         System.out.println (paolini.equals(oda));
         System.out.println(onePiece.hashCode());
+        onePiece.setYearOfPublication(1999);
+        System.out.println(onePiece);
     }
 }
