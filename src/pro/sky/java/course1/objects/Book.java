@@ -12,9 +12,8 @@ public class Book {
         this.bookName = bookName;
         this.yearOfPublication = yearOfPublication;
     }
-    public Author getAuthor(){
-        return this.author;
-    }
+
+
 
     public Author getAuthor() {
         return this.author;
